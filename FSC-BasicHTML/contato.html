@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+  </head>
+  <body>
+    <headerlist>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </headerlist>
+    <form method="GET" action="thank.html">
+      <div>
+        <label for="name">Nome</label>
+        <input type="text" name="name" />
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" />
+      </div>
+      <div>
+        <label for="pass">Senha</label>
+        <input type="pass" name="pass" />
+      </div>
+      <div>
+        <label for="gender">Gênero</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="Masculino" />
+          <label for="male">Masculino</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="gender" value="Feminino" />
+          <label for="female">Masculino</label>
+        </div>
+        <div>
+          <input type="radio" id="other" name="gender" value="Outro" />
+          <label for="other">Masculino</label>
+        </div>
+      </div>
+      <div>
+        <label for="services">Quais serviços você quer Contratar</label>
+        <div>
+          <input
+            type="checkbox"
+            id="landing"
+            name="services"
+            value="LandingPages"
+          />
+          <label for="landing">Criação de Landing Pages</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="applications"
+            name="services"
+            value="Applications"
+          />
+          <label for="applications">Criação de Aplicações</label>
+        </div>
+        <div>
+          <input type="checkbox" id="format" name="services" value="Format" />
+          <label for="format">Formatação de computador</label>
+        </div>
+      </div>
+      <div>
+        <label for="msg">Deixe sua mensagem</label>
+        <div>
+          <textarea id="msg" name="msg"></textarea>
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
+    </form>
+  </body>
+</html>

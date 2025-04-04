@@ -1,0 +1,303 @@
+html {
+  overflow-y: auto;
+  overflow: auto;
+}
+body {
+  --main-bg: #e2eaf5;
+  --blue-color: linear-gradient(#007dfe, #3aa2ff);
+  --main-color: #2a394f;
+  --detail-label: #8f8f8f;
+  --icon-color: #ababab;
+  --rain-chance: #9aa0a8;
+  --small-card-bg: #ffffff;
+  --searchbarbg: #fdfffe;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  overflow-y: auto;
+  overflow: auto;
+  background-color: var(--main-bg);
+}
+.main {
+  overflow-y: auto;
+  overflow: auto;
+}
+.header {
+  width: 50%;
+  height: 5%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--searchbarbg);
+  border: solid 1px var(--icon-color);
+  border-radius: 20px;
+  color: var(--detail-label);
+  width: 100%;
+  margin-left: 20px;
+  gap: 3px;
+}
+.bodycontent {
+  width: 90%;
+  gap: 5%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: inherit;
+}
+.maincontent {
+  display: grid;
+  width: 50%;
+  height: inherit;
+  column-gap: 20px;
+  row-gap: 50px;
+  grid-template-areas: "maininfo actualicon" "hourinfo hourinfo" "details details";
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3, 33.3%);
+}
+.maininfo {
+  grid-area: maininfo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0;
+}
+.maininfo > h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--main-color);
+  margin-bottom: 5px;
+}
+.maininfo > p {
+  margin: 0 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--rain-chance);
+}
+.maininfo > h3 {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 85px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--main-color);
+}
+.actualicon {
+  grid-area: actualicon;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-content: center;
+}
+.hourinfo {
+  width: 830px;
+  grid-area: hourinfo;
+  background: var(--blue-color);
+  display: grid;
+  border-radius: 30px;
+  grid-template-columns: repeat(6, 15%);
+  padding: 0 30px;
+  justify-content: space-around;
+  height: 260px;
+}
+.hourtempbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.hourtempbox > p {
+  color: var(--small-card-bg);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.hourtempbox > img {
+  width: 70px;
+  height: 60px;
+}
+.hourtempbox > h4 {
+  height: 0;
+  margin-top: 10px;
+  color: var(--small-card-bg);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.details {
+  grid-area: details;
+  width: 100%;
+  height: 170px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 100%;
+  column-gap: 10px;
+}
+.detailbox {
+  width: 219px;
+  height: 165px;
+  background-color: var(--small-card-bg);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detailbox > .textcontainer {
+  width: inherit;
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.detailbox > .textcontainer > p {
+  color: var(--detail-label);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+  align-self: center;
+  position: absolute;
+  top: 20px;
+}
+.detailbox > .infocontainer {
+  width: inherit;
+  height: 66%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.detailbox > .infocontainer > img {
+  width: 17;
+  height: 34;
+}
+.detailbox > .infocontainer > h5 {
+  color: var(--main-color);
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.sidecontent {
+  width: 15%;
+  background-color: var(--small-card-bg);
+  display: grid;
+  grid-template-rows: repeat(7, 12.5%);
+  grid-template-columns: 100%;
+  border-radius: 40px;
+}
+.dayinfo {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 30% 30% 40%;
+}
+.dayinfo > p {
+  color: var(--detail-label);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+  align-self: center;
+  padding-left: 10px;
+}
+.dayinfo > img {
+  width: 70px;
+  height: 60px;
+  align-self: center;
+  padding-left: 20px;
+}
+.dayinfo > .minmaxtemp {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.minmaxtemp > .max {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.minmaxtemp > .min {
+  color: var(--detail-label);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .bodycontent {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    margin: 0;
+    width: 600px;
+  }
+  .maincontent {
+    flex: 2;
+    max-width: 600px;
+    min-width: 600px;
+    height: 900px;
+    margin: 0 auto;
+    padding: 0 10%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .actualicon {
+    justify-content: flex-start;
+  }
+  .maininfo {
+    margin-top: 70px;
+  }
+  .maininfo > h2 {
+    font-size: 40px;
+  }
+  .maininfo > p {
+    font-size: 16px;
+  }
+  .maininfo > h3 {
+    font-size: 68px;
+  }
+  .details {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    row-gap: 100px;
+  }
+  .sidecontent {
+    margin: 0 auto;
+    width: 50%;
+    height: 500px;
+    grid-template-rows: repeat(7, 14%);
+  }
+}

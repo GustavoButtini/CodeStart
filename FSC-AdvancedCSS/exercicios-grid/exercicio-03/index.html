@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid: Desafio 03</title>
+
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font-size: 1.2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1rem;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        gap: 10px;
+        grid-template-rows: 2;
+      }
+      .card {
+        display: grid;
+        grid-template-rows: 200px min-content;
+      }
+
+      .card > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .tags {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-grid;
+        padding: 0 5px 0 5px;
+      }
+      .card:nth-child(1) > .tags {
+        margin: auto;
+        grid-template-areas: "block1 block1 block2 block3" "block4 block5 block5 block5";
+      }
+      .card:nth-child(2) > .tags {
+        margin: auto;
+        grid-template-areas: "block1 block1 block2" "block3 block4 block4";
+      }
+      .card:nth-child(3) > .tags {
+        margin: auto;
+        grid-template-columns: min-content auto;
+        grid-template-areas: "block1 block2" "block3 block4";
+      }
+      .card:nth-child(4) > .tags {
+        margin: auto;
+        grid-template-columns: repeat(12, 25px);
+      }
+      .tags > li {
+        background-color: #999;
+        color: #fff;
+        padding: 0.2rem 0.8rem;
+        border-radius: 0.2rem;
+        font-size: 80%;
+        margin: 5px;
+        max-width: fit-content;
+        min-width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="./images/balloons1.jpg" alt="a single red balloon" />
+        <ul class="tags">
+          <li style="grid-area: block1">balloon</li>
+          <li style="grid-area: block2">red</li>
+          <li style="grid-area: block3">sky</li>
+          <li style="grid-area: block4">blue</li>
+          <li style="grid-area: block5">Hot air balloon</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="./images/balloons2.jpg" alt="balloons over some houses" />
+        <ul class="tags">
+          <li style="grid-area: block1">balloons</li>
+          <li style="grid-area: block2">houses</li>
+          <li style="grid-area: block3">train</li>
+          <li style="grid-area: block4">harborside</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img
+          src="./images/balloons3.jpg"
+          alt="close-up of balloons inflating"
+        />
+        <ul class="tags">
+          <li style="grid-area: block1">balloons</li>
+          <li style="grid-area: block2">inflating</li>
+          <li style="grid-area: block3; justify-self: end">green</li>
+          <li style="grid-area: block4">blue</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="./images/balloons4.jpg" alt="a balloon in the sun" />
+        <ul class="tags">
+          <li style="grid-row-start: 1; grid-column: 2/12">balloon</li>
+          <li style="grid-row-start: 1; grid-column: 5/12; margin-left: 15px">
+            sun
+          </li>
+          <li style="grid-row-start: 1; grid-column: 7/12; margin-left: 30px">
+            sky
+          </li>
+          <li style="grid-row-start: 2; grid-column: 3/12">summer</li>
+          <li style="grid-row-start: 2; grid-column: 6/12; margin-left: 20px">
+            bright
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

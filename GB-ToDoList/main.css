@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  background-color: #eee;
+  border: 1px solid #000;
+  border-radius: 20px;
+  margin: 20px auto;
+  width: 50%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list {
+  border: 1px solid #000;
+  border-radius: 20px;
+}
