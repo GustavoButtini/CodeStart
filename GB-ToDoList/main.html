@@ -7,16 +7,19 @@
     <title>To Do List</title>
   </head>
   <body>
-    <div class="maindiv center">
-      <div class="list box">
-        <h2 class="boxheader center">To-Do list</h2>
-        <div class="boxcontent">
-          <div class="tasks">
-            <script src="tasks.js"></script>
-          </div>
-        </div>
+    <div class="content">
+      <div class="createtask">
+        <input
+          type="text"
+          class="taskname"
+          placeholder="Tarefa a ser feita"
+          id="taskname"
+        />
+        <button id="taskcreate" class="actionbutton">Adicionar</button>
       </div>
-      <div class="createtask box"></div>
+      <div class="tasks" id="tasks">
+        <script src="./js/fetchtasks.js"></script>
+      </div>
     </div>
   </body>
 </html>
