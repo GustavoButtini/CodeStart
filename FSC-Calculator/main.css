@@ -1,0 +1,79 @@
+body {
+  --main_bg: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 18%,
+    rgba(0, 42, 0, 1) 31%,
+    rgba(0, 255, 66, 1) 100%
+  );
+  --button_bg: #000;
+  --second_button: rgba(0, 255, 66, 1);
+  --calc_bg: #222;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  height: 100vh;
+  background-image: var(--main_bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  height: 70%;
+  background-color: var(--button_bg);
+}
+.resultscreen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 15%;
+  background-color: var(--calc_bg);
+  z-index: 1;
+  padding: 10px 0;
+}
+.resultscreen > * {
+  position: relative;
+  line-height: 100%;
+  letter-spacing: 2px;
+  right: 10px;
+}
+.smalltext {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+}
+.bigtext {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  bottom: 15px;
+}
+.digitpanel {
+  display: grid;
+  height: 85%;
+  width: 100%;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(5, 20%);
+}
+.val1,
+.val16 {
+  grid-column: span 2;
+}
+.digit {
+  background-color: var(--button_bg);
+  border: solid 0.5px #111;
+  color: #fff;
+  font-size: clamp(24px, 30px, 50px);
+}
+.specialdigit {
+  background-color: rgba(0, 255, 66, 0.5);
+  color: #fff;
+  font-size: clamp(24px, 30px, 50px);
+}
