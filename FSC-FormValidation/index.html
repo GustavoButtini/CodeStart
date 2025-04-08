@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div class="form">
+      <div class="header"><p>Criar uma conta nova</p></div>
+      <div class="content">
+        <form class="formcontent" id="form">
+          <label for="nome">Nome de Usuário</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Digite um nome de usuário..."
+            class="input"
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu Email..."
+            class="input"
+          />
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Digite sua Senha..."
+            class="input"
+          />
+          <label for="csenha">Confirmação de Senha</label>
+          <input
+            type="password"
+            name="csenha"
+            id="csenha"
+            placeholder="Digite sua Senha novamente..."
+            class="input"
+          />
+          <input type="submit" class="sendbutton" />
+        </form>
+      </div>
+    </div>
+    <script src="validate.js"></script>
+  </body>
+</html>
